@@ -1,4 +1,5 @@
 import 'package:finmanager/login.dart';
+import 'package:finmanager/pages/details.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -362,7 +363,10 @@ class _CardsState extends State<Cards> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   onPressed: () {
-                    null;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AddCard()),
+                    );
                   },
                 ),
               ),
