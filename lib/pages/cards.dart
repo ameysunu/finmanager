@@ -119,6 +119,7 @@ class _CardsState extends State<Cards> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       "12th October 2020",
@@ -129,7 +130,7 @@ class _CardsState extends State<Cards> {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 10.0),
                                       child: Text(
-                                        "CHIPOTLE, TEXAS",
+                                        "ACC:XXX456 METRO",
                                         style: TextStyle(
                                             color: Colors.white54,
                                             fontFamily: 'Metropolis'),
@@ -138,7 +139,44 @@ class _CardsState extends State<Cards> {
                                   ],
                                 ),
                                 Text(
-                                  "- \u0024 75",
+                                  "+ \u0024 5.76",
+                                  style: TextStyle(
+                                      color: Colors.green,
+                                      fontSize: 18,
+                                      fontFamily: 'Metropolis'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "11th October 2020",
+                                      style: TextStyle(
+                                          color: HexColor('#CBCCFF'),
+                                          fontFamily: 'Metropolis'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Text(
+                                        "APPLE STORE, DALLAS",
+                                        style: TextStyle(
+                                            color: Colors.white54,
+                                            fontFamily: 'Metropolis'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Text(
+                                  "- \u0024 450",
                                   style: TextStyle(
                                       color: Colors.red,
                                       fontSize: 18,
@@ -155,9 +193,10 @@ class _CardsState extends State<Cards> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "12th October 2020",
+                                      "11th October 2020",
                                       style: TextStyle(
                                           color: HexColor('#CBCCFF'),
                                           fontFamily: 'Metropolis'),
@@ -165,7 +204,7 @@ class _CardsState extends State<Cards> {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 10.0),
                                       child: Text(
-                                        "CHIPOTLE, TEXAS",
+                                        "UBER INC.",
                                         style: TextStyle(
                                             color: Colors.white54,
                                             fontFamily: 'Metropolis'),
@@ -174,7 +213,7 @@ class _CardsState extends State<Cards> {
                                   ],
                                 ),
                                 Text(
-                                  "- \u0024 75",
+                                  "- \u0024 3.10",
                                   style: TextStyle(
                                       color: Colors.red,
                                       fontSize: 18,
@@ -191,9 +230,10 @@ class _CardsState extends State<Cards> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "12th October 2020",
+                                      "9th October 2020",
                                       style: TextStyle(
                                           color: HexColor('#CBCCFF'),
                                           fontFamily: 'Metropolis'),
@@ -201,7 +241,7 @@ class _CardsState extends State<Cards> {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 10.0),
                                       child: Text(
-                                        "CHIPOTLE, TEXAS",
+                                        "ACC:XXX8933 RENT",
                                         style: TextStyle(
                                             color: Colors.white54,
                                             fontFamily: 'Metropolis'),
@@ -210,7 +250,7 @@ class _CardsState extends State<Cards> {
                                   ],
                                 ),
                                 Text(
-                                  "- \u0024 75",
+                                  "- \u0024 1000",
                                   style: TextStyle(
                                       color: Colors.red,
                                       fontSize: 18,
@@ -227,9 +267,10 @@ class _CardsState extends State<Cards> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "12th October 2020",
+                                      "9th October 2020",
                                       style: TextStyle(
                                           color: HexColor('#CBCCFF'),
                                           fontFamily: 'Metropolis'),
@@ -237,7 +278,7 @@ class _CardsState extends State<Cards> {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 10.0),
                                       child: Text(
-                                        "CHIPOTLE, TEXAS",
+                                        "ACC:XXX4544 ELECTRICITY AND WATER",
                                         style: TextStyle(
                                             color: Colors.white54,
                                             fontFamily: 'Metropolis'),
@@ -246,7 +287,7 @@ class _CardsState extends State<Cards> {
                                   ],
                                 ),
                                 Text(
-                                  "- \u0024 75",
+                                  "- \u0024 98.65",
                                   style: TextStyle(
                                       color: Colors.red,
                                       fontSize: 18,
@@ -263,9 +304,10 @@ class _CardsState extends State<Cards> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "12th October 2020",
+                                      "1st October 2020",
                                       style: TextStyle(
                                           color: HexColor('#CBCCFF'),
                                           fontFamily: 'Metropolis'),
@@ -273,7 +315,7 @@ class _CardsState extends State<Cards> {
                                     Padding(
                                       padding: const EdgeInsets.only(top: 10.0),
                                       child: Text(
-                                        "CHIPOTLE, TEXAS",
+                                        "MICROSOFT INC.",
                                         style: TextStyle(
                                             color: Colors.white54,
                                             fontFamily: 'Metropolis'),
@@ -282,9 +324,9 @@ class _CardsState extends State<Cards> {
                                   ],
                                 ),
                                 Text(
-                                  "- \u0024 75",
+                                  "+ \u0024 9500",
                                   style: TextStyle(
-                                      color: Colors.red,
+                                      color: Colors.green,
                                       fontSize: 18,
                                       fontFamily: 'Metropolis'),
                                 ),
