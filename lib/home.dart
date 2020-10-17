@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -37,10 +38,41 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Image.asset("images/home.png"),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10.0, 30, 10, 10),
+                child: RaisedButton(
+                  color: HexColor('#9296F0'),
+                  child: Container(
+                    height: 50,
+                    child: Row(
+                      children: [
+                        Text(
+                          "Sup",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  onPressed: () => hello(),
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
   }
+}
+
+void hello() {
+  print("Sup");
 }
