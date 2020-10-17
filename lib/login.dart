@@ -1,4 +1,4 @@
-import 'package:finmanager/homewidget.dart';
+import 'package:finmanager/home.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -135,7 +135,7 @@ class _LoginState extends State<Login> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (context) {
-                              return HomeWidget();
+                              return Home();
                             },
                           ),
                         );
