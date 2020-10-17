@@ -51,10 +51,22 @@ class _HomeState extends State<Home> {
                   child: Container(
                     height: 50,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            height: 25,
+                            width: 25,
+                            child: Image.asset("images/google.png"),
+                          ),
+                        ),
                         Text(
-                          "Sup",
-                          style: TextStyle(color: Colors.white),
+                          "Sign in with Google",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: "Metropolis",
+                              fontSize: 18),
                         ),
                       ],
                     ),
@@ -63,6 +75,16 @@ class _HomeState extends State<Home> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   onPressed: () => hello(),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  "By signing in with Google, you agree to accept Google's terms and conditions",
+                  style: TextStyle(
+                      color: Colors.white54,
+                      fontFamily: "Metropolis",
+                      fontSize: 15),
                 ),
               ),
             ],
