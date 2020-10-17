@@ -1,4 +1,5 @@
 import 'package:finmanager/login.dart';
+import 'package:finmanager/pages/convert.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -157,44 +158,54 @@ class _HomeState extends State<Home> {
                             child: Container(
                               height: 250,
                               width: 175,
-                              child: Card(
-                                color: HexColor('#2E2C2C'),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Center(
-                                        child: Container(
-                                            child: Icon(
-                                      Icons.comment_bank,
-                                      color: HexColor('#FF683E'),
-                                      size: 40,
-                                    ))),
-                                    Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: Text(
-                                        "Currency\nConverter",
-                                        style: TextStyle(
-                                            fontFamily: 'Metropolis',
-                                            color: Colors.white,
-                                            fontSize: 20),
+                              child: InkWell(
+                                child: Card(
+                                  color: HexColor('#2E2C2C'),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                          child: Container(
+                                              child: Icon(
+                                        Icons.comment_bank,
+                                        color: HexColor('#FF683E'),
+                                        size: 40,
+                                      ))),
+                                      Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Text(
+                                          "Currency\nConverter",
+                                          style: TextStyle(
+                                              fontFamily: 'Metropolis',
+                                              color: Colors.white,
+                                              fontSize: 20),
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: Text(
-                                        "Get live currency rates.",
-                                        style: TextStyle(
-                                            fontFamily: 'Metropolis',
-                                            color: Colors.white54,
-                                            fontSize: 15),
-                                      ),
-                                    )
-                                  ],
+                                      Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Text(
+                                          "Get live currency rates.",
+                                          style: TextStyle(
+                                              fontFamily: 'Metropolis',
+                                              color: Colors.white54,
+                                              fontSize: 15),
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Converter()),
+                                  );
+                                },
                               ),
                             ),
                           ),
@@ -234,7 +245,7 @@ class _HomeState extends State<Home> {
                                     Padding(
                                       padding: const EdgeInsets.all(10.0),
                                       child: Text(
-                                        "Monitor your card usage.",
+                                        "All about you.",
                                         style: TextStyle(
                                             fontFamily: 'Metropolis',
                                             color: Colors.white54,
