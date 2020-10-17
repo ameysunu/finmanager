@@ -15,7 +15,7 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(20.0, 30, 10, 10),
+            padding: const EdgeInsets.fromLTRB(20.0, 30, 20, 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -32,6 +32,42 @@ class _HomeState extends State<Home> {
                         color: HexColor('#FFFFFF'),
                         fontFamily: 'Metropolis',
                         fontSize: 25),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 20.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(right: 20.0),
+                            child: Container(
+                              height: 175,
+                              width: 150,
+                              child: Card(
+                                child: Column(
+                                  children: [],
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: Container(
+                              height: 175,
+                              width: 150,
+                              child: Card(
+                                child: Column(
+                                  children: [],
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ],
