@@ -1,4 +1,8 @@
+import 'package:finmanager/login.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
+
+import '../home.dart';
 
 class Cards extends StatefulWidget {
   @override
@@ -49,6 +53,275 @@ class _CardsState extends State<Cards> {
                   ),
                   height: MediaQuery.of(context).size.height * 0.3,
                   width: MediaQuery.of(context).size.width * 1,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Container(
+                  color: HexColor('#2E2C2C'),
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  width: MediaQuery.of(context).size.width * 1,
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Text(
+                            "Transactions",
+                            style: TextStyle(
+                                fontFamily: 'Metropolis',
+                                color: Colors.white,
+                                fontSize: 22),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "12th October 2020",
+                                      style: TextStyle(
+                                          color: HexColor('#CBCCFF'),
+                                          fontFamily: 'Metropolis'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Text(
+                                        "CHIPOTLE, TEXAS",
+                                        style: TextStyle(
+                                            color: Colors.white54,
+                                            fontFamily: 'Metropolis'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Text(
+                                  "- \u0024 75",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 18,
+                                      fontFamily: 'Metropolis'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "12th October 2020",
+                                      style: TextStyle(
+                                          color: HexColor('#CBCCFF'),
+                                          fontFamily: 'Metropolis'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Text(
+                                        "CHIPOTLE, TEXAS",
+                                        style: TextStyle(
+                                            color: Colors.white54,
+                                            fontFamily: 'Metropolis'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Text(
+                                  "- \u0024 75",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 18,
+                                      fontFamily: 'Metropolis'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "12th October 2020",
+                                      style: TextStyle(
+                                          color: HexColor('#CBCCFF'),
+                                          fontFamily: 'Metropolis'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Text(
+                                        "CHIPOTLE, TEXAS",
+                                        style: TextStyle(
+                                            color: Colors.white54,
+                                            fontFamily: 'Metropolis'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Text(
+                                  "- \u0024 75",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 18,
+                                      fontFamily: 'Metropolis'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "12th October 2020",
+                                      style: TextStyle(
+                                          color: HexColor('#CBCCFF'),
+                                          fontFamily: 'Metropolis'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Text(
+                                        "CHIPOTLE, TEXAS",
+                                        style: TextStyle(
+                                            color: Colors.white54,
+                                            fontFamily: 'Metropolis'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Text(
+                                  "- \u0024 75",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 18,
+                                      fontFamily: 'Metropolis'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "12th October 2020",
+                                      style: TextStyle(
+                                          color: HexColor('#CBCCFF'),
+                                          fontFamily: 'Metropolis'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Text(
+                                        "CHIPOTLE, TEXAS",
+                                        style: TextStyle(
+                                            color: Colors.white54,
+                                            fontFamily: 'Metropolis'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Text(
+                                  "- \u0024 75",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 18,
+                                      fontFamily: 'Metropolis'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      "12th October 2020",
+                                      style: TextStyle(
+                                          color: HexColor('#CBCCFF'),
+                                          fontFamily: 'Metropolis'),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 10.0),
+                                      child: Text(
+                                        "CHIPOTLE, TEXAS",
+                                        style: TextStyle(
+                                            color: Colors.white54,
+                                            fontFamily: 'Metropolis'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Text(
+                                  "- \u0024 75",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontSize: 18,
+                                      fontFamily: 'Metropolis'),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10.0, 10, 10, 10),
+                child: RaisedButton(
+                  color: HexColor('#ED5E93'),
+                  child: Container(
+                    height: 50,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "+ Add a card",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: "Metropolis",
+                              fontSize: 18),
+                        ),
+                      ],
+                    ),
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  onPressed: () {
+                    null;
+                  },
                 ),
               ),
             ],
