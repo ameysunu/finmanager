@@ -1,4 +1,5 @@
 import 'package:finmanager/login.dart';
+import 'package:finmanager/pages/cards.dart';
 import 'package:finmanager/pages/convert.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -97,44 +98,54 @@ class _HomeState extends State<Home> {
                             child: Container(
                               height: 250,
                               width: 175,
-                              child: Card(
-                                elevation: 5,
-                                color: HexColor('#2E2C2C'),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Center(
-                                        child: Container(
-                                            child: Icon(
-                                      Icons.attach_money,
-                                      color: HexColor('#00E6E4'),
-                                      size: 40,
-                                    ))),
-                                    Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: Text(
-                                        "Your\nCards",
-                                        style: TextStyle(
-                                            fontFamily: 'Metropolis',
-                                            color: Colors.white,
-                                            fontSize: 20),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Cards()),
+                                  );
+                                },
+                                child: Card(
+                                  elevation: 5,
+                                  color: HexColor('#2E2C2C'),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                          child: Container(
+                                              child: Icon(
+                                        Icons.attach_money,
+                                        color: HexColor('#00E6E4'),
+                                        size: 40,
+                                      ))),
+                                      Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Text(
+                                          "Your\nCards",
+                                          style: TextStyle(
+                                              fontFamily: 'Metropolis',
+                                              color: Colors.white,
+                                              fontSize: 20),
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: Text(
-                                        "Monitor your card usage.",
-                                        style: TextStyle(
-                                            fontFamily: 'Metropolis',
-                                            color: Colors.white54,
-                                            fontSize: 15),
-                                      ),
-                                    )
-                                  ],
+                                      Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Text(
+                                          "Monitor your card usage.",
+                                          style: TextStyle(
+                                              fontFamily: 'Metropolis',
+                                              color: Colors.white54,
+                                              fontSize: 15),
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                               // decoration: new BoxDecoration(
