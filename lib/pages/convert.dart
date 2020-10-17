@@ -64,23 +64,24 @@ class _ConverterState extends State<Converter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: Colors.black,
+          automaticallyImplyLeading: false,
+          title: Text(
+            "Live Currency",
+            style: TextStyle(
+                fontFamily: 'Metropolis',
+                color: HexColor('#CBCCFF'),
+                fontSize: 20),
+          )),
       backgroundColor: Colors.black,
       body: currencies == null
           ? Center(child: CircularProgressIndicator())
           : SafeArea(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10.0, top: 20),
-                    child: Text(
-                      "Live Currency",
-                      style: TextStyle(
-                          fontFamily: 'Metropolis',
-                          color: HexColor('#CBCCFF'),
-                          fontSize: 20),
-                    ),
-                  ),
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Container(
@@ -89,7 +90,7 @@ class _ConverterState extends State<Converter> {
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
-                          //color: Colors.black,
+                          color: HexColor('#9296F0'),
                           elevation: 3.0,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -98,7 +99,9 @@ class _ConverterState extends State<Converter> {
                                 title: TextField(
                                   controller: fromTextController,
                                   style: TextStyle(
-                                      fontSize: 20.0, color: Colors.black),
+                                      fontSize: 20.0,
+                                      color: Colors.black,
+                                      fontFamily: 'Metropolis'),
                                   keyboardType: TextInputType.numberWithOptions(
                                       decimal: true),
                                 ),
@@ -109,6 +112,7 @@ class _ConverterState extends State<Converter> {
                                 child: Container(
                                   height: 40,
                                   child: RaisedButton(
+                                    color: HexColor('#FF92BD'),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -117,6 +121,7 @@ class _ConverterState extends State<Converter> {
                                           "Convert",
                                           style: TextStyle(
                                               fontFamily: 'Metropolis',
+                                              color: HexColor('#AA2282'),
                                               fontSize: 17),
                                         )
                                       ],
@@ -161,7 +166,10 @@ class _ConverterState extends State<Converter> {
                 value: value,
                 child: Row(
                   children: <Widget>[
-                    Text(value),
+                    Text(
+                      value,
+                      style: TextStyle(fontFamily: 'Metropolis'),
+                    ),
                   ],
                 ),
               ))
