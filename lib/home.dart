@@ -1,6 +1,7 @@
 import 'package:finmanager/login.dart';
 import 'package:finmanager/pages/cards.dart';
 import 'package:finmanager/pages/convert.dart';
+import 'package:finmanager/pages/split.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -51,43 +52,53 @@ class _HomeState extends State<Home> {
                             child: Container(
                               height: 250,
                               width: 175,
-                              child: Card(
-                                color: HexColor('#2E2C2C'),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Center(
-                                        child: Container(
-                                            child: Icon(
-                                      Icons.compare_arrows_rounded,
-                                      color: HexColor('#ED5E93'),
-                                      size: 40,
-                                    ))),
-                                    Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: Text(
-                                        "Split\nChecker",
-                                        style: TextStyle(
-                                            fontFamily: 'Metropolis',
-                                            color: Colors.white,
-                                            fontSize: 20),
+                              child: InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Split()),
+                                  );
+                                },
+                                child: Card(
+                                  color: HexColor('#2E2C2C'),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(15.0),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Center(
+                                          child: Container(
+                                              child: Icon(
+                                        Icons.compare_arrows_rounded,
+                                        color: HexColor('#ED5E93'),
+                                        size: 40,
+                                      ))),
+                                      Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Text(
+                                          "Split\nChecker",
+                                          style: TextStyle(
+                                              fontFamily: 'Metropolis',
+                                              color: Colors.white,
+                                              fontSize: 20),
+                                        ),
                                       ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(10.0),
-                                      child: Text(
-                                        "Split with friends easily.",
-                                        style: TextStyle(
-                                            fontFamily: 'Metropolis',
-                                            color: Colors.white54,
-                                            fontSize: 15),
-                                      ),
-                                    )
-                                  ],
+                                      Padding(
+                                        padding: const EdgeInsets.all(10.0),
+                                        child: Text(
+                                          "Split with friends easily.",
+                                          style: TextStyle(
+                                              fontFamily: 'Metropolis',
+                                              color: Colors.white54,
+                                              fontSize: 15),
+                                        ),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),

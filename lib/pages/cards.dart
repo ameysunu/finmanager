@@ -1,9 +1,6 @@
-import 'package:finmanager/login.dart';
 import 'package:finmanager/pages/details.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-
-import '../home.dart';
 
 class Cards extends StatefulWidget {
   @override
