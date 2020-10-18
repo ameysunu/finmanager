@@ -84,13 +84,21 @@ class _ConverterState extends State<Converter> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      "Get live currency conversion rates",
+                      style: TextStyle(
+                          color: Colors.white, fontFamily: 'Metropolis'),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
                     child: Container(
                       height: MediaQuery.of(context).size.height / 2,
                       width: MediaQuery.of(context).size.width,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
-                          color: HexColor('#9296F0'),
+                          color: HexColor('#2E2C2C'),
                           elevation: 3.0,
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -100,7 +108,7 @@ class _ConverterState extends State<Converter> {
                                   controller: fromTextController,
                                   style: TextStyle(
                                       fontSize: 20.0,
-                                      color: Colors.black,
+                                      color: Colors.white,
                                       fontFamily: 'Metropolis'),
                                   keyboardType: TextInputType.numberWithOptions(
                                       decimal: true),
@@ -112,7 +120,7 @@ class _ConverterState extends State<Converter> {
                                 child: Container(
                                   height: 40,
                                   child: RaisedButton(
-                                    color: HexColor('#FF92BD'),
+                                    color: HexColor('#F7E7EB'),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.center,
@@ -160,6 +168,7 @@ class _ConverterState extends State<Converter> {
 
   Widget _buildDropDownButton(String currencyCategory) {
     return DropdownButton(
+      dropdownColor: Colors.black,
       value: currencyCategory,
       items: currencies
           .map((String value) => DropdownMenuItem(
@@ -168,7 +177,8 @@ class _ConverterState extends State<Converter> {
                   children: <Widget>[
                     Text(
                       value,
-                      style: TextStyle(fontFamily: 'Metropolis'),
+                      style: TextStyle(
+                          fontFamily: 'Metropolis', color: Colors.white),
                     ),
                   ],
                 ),
