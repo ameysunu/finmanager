@@ -229,10 +229,28 @@ void _popup(BuildContext context) {
       context: context,
       builder: (context) {
         return AlertDialog(
+          backgroundColor: Colors.black,
           title: Center(
-            child: Text(
-              calc.toString(),
-              style: TextStyle(fontFamily: 'Poppins'),
+            child: Container(
+              child: Column(
+                children: [
+                  Text(
+                    "Total Bill per person",
+                    style: TextStyle(
+                        fontFamily: 'Metropolis', color: Colors.white),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text(
+                      calc.toString(),
+                      style: TextStyle(
+                          fontFamily: 'Metropolis',
+                          color: Colors.white,
+                          fontSize: 30),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         );
