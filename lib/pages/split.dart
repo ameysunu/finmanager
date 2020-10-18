@@ -60,7 +60,7 @@ class _SplitState extends State<Split> {
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
                     color: HexColor('#2E2C2C'),
-                    height: MediaQuery.of(context).size.height * 0.5,
+                    height: MediaQuery.of(context).size.height * 0.4,
                     width: MediaQuery.of(context).size.width * 1,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,7 +166,13 @@ class _SplitState extends State<Split> {
                                   left: 10.0, right: 10, top: 10),
                               child: Container(
                                 width: 100,
+                                height: 40,
                                 child: TextField(
+                                  decoration: new InputDecoration(
+                                    enabledBorder: new OutlineInputBorder(
+                                        borderSide: new BorderSide(
+                                            color: Colors.white)),
+                                  ),
                                   controller: tipController,
                                   style: TextStyle(
                                       color: Colors.white,
@@ -177,13 +183,8 @@ class _SplitState extends State<Split> {
                             ),
                           ],
                         ),
-                        Center(
-                            child: Text(
-                          calc.toString(),
-                          style: TextStyle(color: Colors.white),
-                        )),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(10.0, 10, 10, 10),
+                          padding: const EdgeInsets.fromLTRB(10.0, 50, 10, 10),
                           child: RaisedButton(
                             color: HexColor('#ED5E93'),
                             child: Container(
@@ -206,6 +207,7 @@ class _SplitState extends State<Split> {
                             ),
                             onPressed: () {
                               billCalc();
+                              _popup(context);
                             },
                           ),
                         ),
@@ -222,4 +224,17 @@ class _SplitState extends State<Split> {
   }
 }
 
-void popup() {}
+void _popup(BuildContext context) {
+  showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Center(
+            child: Text(
+              calc.toString(),
+              style: TextStyle(fontFamily: 'Poppins'),
+            ),
+          ),
+        );
+      });
+}
