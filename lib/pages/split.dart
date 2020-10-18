@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
@@ -8,6 +6,11 @@ final tipController = TextEditingController();
 
 int calc = 0;
 int counter = 0;
+double gbp = 0;
+double inr = 0;
+double eur = 0;
+double aed = 0;
+double yen = 0;
 
 class Split extends StatefulWidget {
   @override
@@ -19,6 +22,16 @@ class _SplitState extends State<Split> {
     setState(() => calc);
     var bill = double.parse(billController.text);
     calc = bill ~/ counter;
+  }
+
+  void currChange() {
+    setState(() {
+      gbp = calc * 0.77;
+      inr = calc * 73.44;
+      eur = calc * 0.85;
+      aed = calc * 3.67;
+      yen = calc * 105.39;
+    });
   }
 
   void increment() {
@@ -186,7 +199,7 @@ class _SplitState extends State<Split> {
                         Padding(
                           padding: const EdgeInsets.fromLTRB(10.0, 50, 10, 10),
                           child: RaisedButton(
-                            color: HexColor('#ED5E93'),
+                            color: HexColor('#9296F0'),
                             child: Container(
                               height: 50,
                               child: Row(
@@ -207,12 +220,137 @@ class _SplitState extends State<Split> {
                             ),
                             onPressed: () {
                               billCalc();
+                              currChange();
                               _popup(context);
                             },
                           ),
                         ),
                       ],
                     ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    "Live Currency",
+                    style: TextStyle(
+                        color: HexColor('#ED5E93'),
+                        fontFamily: 'Metropolis',
+                        fontSize: 20),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "United States Dollars(USD)",
+                        style: TextStyle(
+                            color: Colors.white, fontFamily: 'Metropolis'),
+                      ),
+                      Text(
+                        calc.toString(),
+                        style: TextStyle(
+                            color: HexColor('#00C9C8'),
+                            fontFamily: 'Metropolis'),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Great Britian Pounds(GBP)",
+                        style: TextStyle(
+                            color: Colors.white, fontFamily: 'Metropolis'),
+                      ),
+                      Text(
+                        gbp.toString(),
+                        style: TextStyle(
+                            color: HexColor('#00C9C8'),
+                            fontFamily: 'Metropolis'),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Euros(EUR)",
+                        style: TextStyle(
+                            color: Colors.white, fontFamily: 'Metropolis'),
+                      ),
+                      Text(
+                        eur.toString(),
+                        style: TextStyle(
+                            color: HexColor('#00C9C8'),
+                            fontFamily: 'Metropolis'),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "United Arab Emirates Dirhams(AED)",
+                        style: TextStyle(
+                            color: Colors.white, fontFamily: 'Metropolis'),
+                      ),
+                      Text(
+                        aed.toString(),
+                        style: TextStyle(
+                            color: HexColor('#00C9C8'),
+                            fontFamily: 'Metropolis'),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Indian Rupees(INR)",
+                        style: TextStyle(
+                            color: Colors.white, fontFamily: 'Metropolis'),
+                      ),
+                      Text(
+                        inr.toString(),
+                        style: TextStyle(
+                            color: HexColor('#00C9C8'),
+                            fontFamily: 'Metropolis'),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Japanese Yen(YEN)",
+                        style: TextStyle(
+                            color: Colors.white, fontFamily: 'Metropolis'),
+                      ),
+                      Text(
+                        gbp.toString(),
+                        style: TextStyle(
+                            color: HexColor('#00C9C8'),
+                            fontFamily: 'Metropolis'),
+                      )
+                    ],
                   ),
                 ),
               ],
