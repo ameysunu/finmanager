@@ -3,7 +3,7 @@
 [![Build Status](https://dev.azure.com/ameypsunu2017/FinanceManager/_apis/build/status/ameysunu.finmanager?branchName=master)](https://dev.azure.com/ameypsunu2017/FinanceManager/_build/latest?definitionId=15&branchName=master)
 
 
-A new Flutter project.
+Manage bill splits, wallets, cards and of course get live currencies.
 
 ## Getting Started
 
